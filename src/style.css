@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: url("/img/1.jpg") no-repeat center center/cover;
+}
+
+.hero-content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7); /* semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative; /* Ensures background-clip works correctly */
+}
+
+.hero-title {
+  font-size: 6em;
+  font-weight: bold;
+  line-height: 1em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.highlight-left,
+.highlight-right {
+  color: transparent;
+  position: relative;
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: inherit; /* Inherit background from parent */
+}
+
+.highlight-left {
+  clip-path: inset(0 50% 0 0);
+}
+
+.highlight-right {
+  clip-path: inset(0 0 0 50%);
+}
+
+.hero-content p {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
